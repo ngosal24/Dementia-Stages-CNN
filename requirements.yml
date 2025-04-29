@@ -1,0 +1,45 @@
+name: dementia_classifier_env
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+  - nvidia
+
+dependencies:
+  # Core Python
+  - python=3.12
+
+  # Deep Learning Frameworks
+  - pytorch=2.2.1
+  - torchvision=0.17.1
+  - torchaudio=2.2.1
+  - pytorch-cuda=12.1  # Comment/remove this line if not using CUDA
+  # - cudatoolkit=12.1  # Only needed if GPU acceleration is intended
+
+  # Scientific Computing
+  - numpy=1.26
+  - scipy=1.12
+
+  # Data Handling
+  - pandas=2.2
+  - scikit-learn=1.4
+  - matplotlib=3.8
+  - pillow=10.2  # For image loading
+
+  # Progress bar
+  - tqdm=4.66
+
+  # Image processing (optional augmentation or advanced transforms)
+  - scikit-image=0.22
+
+  # Development / Utility Tools
+  - pip
+  - ipykernel  # Enables use in Jupyter Notebooks
+  - jupyterlab  # Optional, for notebook use
+  - ipywidgets
+
+  # Pip-only packages
+  - pip:
+      - focal-loss==0.0.7  # If using FocalLoss (installed via pip)
+      # - torchvision-image-utils==0.2.0  # Optional: for image debugging/augmentation
+      - seaborn==0.13  # Visualization (optional)
